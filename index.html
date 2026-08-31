@@ -1,552 +1,651 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luís Eduardo | Automação & Tecnologia para Negócios Locais</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-     <link rel="icon" type="image/png" href="images/logo.png" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              terminal: {
-                green: '#00ff88',
-                dim: '#00cc6a',
-                bg: '#080c0e',
-                surface: '#0d1518',
-                border: '#1a2a2e',
-                muted: '#1f3035',
-                text: '#c8d8db',
-                subtle: '#5a7a82',
-              }
-            },
-            fontFamily: {
-              mono: ['"JetBrains Mono"', 'monospace'],
-              display: ['Syne', 'sans-serif'],
-            },
-          }
-        }
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Luís Eduardo — Automação e Sistemas para Negócios de João Pessoa</title>
+  <meta name="description" content="Sistemas de agendamento, automação de WhatsApp e sites para pequenos negócios de João Pessoa. Produtos prontos a partir de R$97, sem contrato longo e sem enrolação." />
+  <meta name="author" content="Luís Eduardo Bezerra Cavalcanti de Carvalho" />
+  <link rel="canonical" href="https://luis-carvalho-pt-br.vercel.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://luis-carvalho-pt-br.vercel.app/" />
+  <meta property="og:site_name" content="Luís Eduardo — Automação e Sistemas" />
+  <meta property="og:title" content="Seu negócio no piloto automático." />
+  <meta property="og:description" content="Agendamento online, atendimento automático no WhatsApp e sistemas sob medida para negócios de João Pessoa. A partir de R$97." />
+  <meta property="og:image" content="https://luis-carvalho-pt-br.vercel.app/og.png" />
+  <meta property="og:image:alt" content="Luís Eduardo — Automação e Sistemas para Negócios Locais" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Seu negócio no piloto automático." />
+  <meta name="twitter:description" content="Agendamento online, atendimento automático no WhatsApp e sistemas sob medida para negócios de João Pessoa. A partir de R$97." />
+  <meta name="twitter:image" content="https://luis-carvalho-pt-br.vercel.app/og.png" />
+  <meta name="theme-color" content="#09090b" />
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Sinaliza que o JS está vivo ANTES do primeiro paint. Sem essa classe o
+       .reveal não esconde nada — script morto custa animação, nunca conteúdo. -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Luís Eduardo — Automação e Sistemas",
+    "description": "Sistemas de agendamento, automação de atendimento no WhatsApp, sites e sistemas de gestão para pequenos negócios.",
+    "url": "https://luis-carvalho-pt-br.vercel.app/",
+    "email": "dtr.luis18@gmail.com",
+    "telephone": "+5583991389333",
+    "priceRange": "R$97 - R$99/mês",
+    "areaServed": { "@type": "City", "name": "João Pessoa" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "João Pessoa",
+      "addressRegion": "PB",
+      "addressCountry": "BR"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Luís Eduardo Bezerra Cavalcanti de Carvalho",
+      "jobTitle": "Desenvolvedor e Especialista em Automação",
+      "worksFor": { "@type": "Organization", "name": "INORPEL Cybersecurity" },
+      "sameAs": ["https://github.com/loki-crypto"]
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "Sistema de agendamento online (StudioFlow)",
+        "price": "99.00",
+        "priceCurrency": "BRL",
+        "description": "Agenda online, link de agendamento para o cliente e cadastro de clientes. Assinatura mensal, cancela quando quiser."
+      },
+      {
+        "@type": "Offer",
+        "name": "Gerador de Orçamentos em PDF — instalado e personalizado",
+        "price": "97.00",
+        "priceCurrency": "BRL",
+        "description": "Gerador de orçamento em PDF com a sua logo e seus dados, funcionando offline. Pagamento único."
       }
-    </script>
-  </head>
-  <body>
+    ]
+  }
+  </script>
+</head>
+<body>
 
-    <!-- ══════════ NAV ══════════ -->
-    <header style="background: rgba(8,12,14,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);" class="sticky top-0 z-50">
-      <nav class="container mx-auto px-6 py-4 flex justify-between items-center max-w-6xl">
-        <a href="#" class="mono font-bold text-sm">
-          <span class="text-green">$</span>
-          <span style="color: var(--text)"> luis</span>
-          <span class="text-green">@</span>
-          <span style="color: var(--subtle)">automação</span>
-          <span class="cursor"></span>
-        </a>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="#sobre" class="nav-link">sobre</a>
-          <a href="#solucoes" class="nav-link">soluções</a>
-          <a href="#projetos" class="nav-link">projetos</a>
-          <a href="#servicos" class="nav-link">serviços</a>
-          <a href="#contato" class="btn-primary text-xs py-2 px-4">fale comigo</a>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <!-- ══════════════════════════ HEADER ══════════════════════════ -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Principal">
+      <a href="#" class="brand">
+        <img src="images/logo.png" alt="" width="26" height="26" />
+        <span>luis<b>@</b>automação</span>
+        <span class="cursor" aria-hidden="true"></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#sobre"    class="nav-link">sobre</a></li>
+        <li><a href="#solucoes" class="nav-link">soluções</a></li>
+        <li><a href="#casos"    class="nav-link">casos</a></li>
+        <li><a href="#produtos" class="nav-link">produtos</a></li>
+        <li><a href="#servicos" class="nav-link">serviços</a></li>
+        <li><a href="https://wa.me/5583991389333" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">fale comigo</a></li>
+      </ul>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="visually-hidden">Abrir menu</span>
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" />
+        </svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke-linecap="round" />
+        </svg>
+      </button>
+    </nav>
+
+    <div class="mobile-nav" id="mobile-nav" data-open="false">
+      <ul>
+        <li><a href="#sobre">sobre</a></li>
+        <li><a href="#solucoes">soluções</a></li>
+        <li><a href="#casos">casos</a></li>
+        <li><a href="#produtos">produtos</a></li>
+        <li><a href="#servicos">serviços</a></li>
+        <li><a href="#contato">contato</a></li>
+        <li><a href="https://wa.me/5583991389333" target="_blank" rel="noopener noreferrer">falar no WhatsApp →</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ══════════════════════════ HERO ══════════════════════════ -->
+    <section class="hero">
+      <div class="container">
+        <div class="reveal">
+
+          <p class="hero-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            Disponível para projetos · João Pessoa, PB
+          </p>
+
+          <h1 class="hero-title">Seu negócio no<br /><strong>piloto automático.</strong></h1>
+
+          <p class="hero-lede">
+            Faço sistemas e automações para pequenos negócios de João Pessoa — salão, pet shop,
+            assistência técnica, clínica, comércio. Sem contrato longo, sem projeto inchado,
+            sem cobrar por tecnologia que você não precisa.
+          </p>
+
+          <div class="pain-row">
+            <span class="pain-badge">WhatsApp lotado de pergunta repetida</span>
+            <span class="pain-badge">Agenda e estoque no caderno</span>
+            <span class="pain-badge">Horas por semana em tarefa manual</span>
+          </div>
+
+          <div class="button-row">
+            <a href="#produtos" class="btn btn--primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+              Ver produtos e preços
+            </a>
+            <a href="https://wa.me/5583991389333" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+              Chamar no WhatsApp ↗
+            </a>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat">
+              <p class="stat__value">3</p>
+              <p class="stat__label">sistemas rodando<br />em produção hoje</p>
+            </div>
+            <div class="stat">
+              <p class="stat__value">R$97</p>
+              <p class="stat__label">a partir de,<br />pagamento único</p>
+            </div>
+            <div class="stat">
+              <p class="stat__value">24h</p>
+              <p class="stat__label">tempo de<br />resposta</p>
+            </div>
+          </div>
+
         </div>
-        <button id="menu-btn" class="md:hidden p-2" style="color: var(--green);">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
-          </svg>
-        </button>
-      </nav>
-      <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 pt-3 space-y-3">
-        <a href="#sobre" class="block nav-link py-2">sobre</a>
-        <a href="#solucoes" class="block nav-link py-2">soluções</a>
-        <a href="#projetos" class="block nav-link py-2">projetos</a>
-        <a href="#servicos" class="block nav-link py-2">serviços</a>
-        <a href="#contato" class="block nav-link py-2">contato</a>
       </div>
-    </header>
+    </section>
 
-    <main>
+    <!-- ══════════════════════════ SOBRE ══════════════════════════ -->
+    <section class="section section--alt" id="sobre">
+      <div class="container">
+        <div class="grid grid--split">
 
-      <!-- ══════════ HERO ══════════ -->
-      <section id="hero" class="hero-grid relative min-h-screen flex items-center py-24 overflow-hidden" style="border-bottom: 1px solid var(--border);">
-        <div style="position:absolute;top:20%;left:50%;transform:translateX(-50%);width:min(700px,100%);height:400px;background:radial-gradient(ellipse at center, rgba(0,255,136,0.07) 0%, transparent 70%);pointer-events:none;"></div>
+          <div class="reveal">
+            <p class="eyebrow flow-sm">quem sou</p>
+            <h2 class="section-title flow-md">Tecnologia que você<br /><strong>realmente entende.</strong></h2>
 
-        <div class="container mx-auto px-6 max-w-6xl relative z-10">
-          <div class="max-w-3xl">
-
-            <div class="mono text-xs mb-6 flex items-center gap-3" style="color: var(--subtle);">
-              <span class="text-green">●</span>
-              <span>Disponível para projetos · João Pessoa, PB</span>
-            </div>
-
-            <div class="mono text-sm mb-4" style="color: var(--subtle);">
-              <span class="text-green">$</span> apresentando...
-            </div>
-
-            <h1 class="font-display font-extrabold leading-none mb-2" style="font-size: clamp(2.8rem, 7vw, 5.2rem); color: #e8f4f6; letter-spacing: -0.02em;">
-              Seu negócio no<br/>
-              <span class="text-green glow-green">piloto automático.</span>
-            </h1>
-
-            <p class="font-display font-medium mt-6 mb-8 text-lg md:text-xl" style="color: var(--subtle); max-width: 560px; line-height: 1.65;">
-              Sou especialista em automação e sistemas para pequenas empresas — clínicas, comércios, escritórios. Faço a tecnologia trabalhar por você, não o contrário.
+            <p class="body-text">
+              Sou <strong>Luís Eduardo</strong>, desenvolvedor e especialista em automação. Trabalho
+              com segurança da informação na <strong>INORPEL Cybersecurity</strong> e curso Ciência
+              da Computação na UNIESP. Nas horas em que não estou lá, construo sistemas para negócios
+              locais que precisam sair do improviso.
+            </p>
+            <p class="body-text">
+              Minha forma de trabalhar é simples: eu entro no seu negócio, entendo como você opera
+              hoje e monto a solução certa pra isso — nem mais, nem menos. Você não fica preso em
+              contrato de 12 meses e não paga por funcionalidade que nunca vai usar.
             </p>
 
-            <!-- Pain points rápidos -->
-            <div class="flex flex-wrap gap-2 mb-10">
-              <span class="pain-badge">❌ WhatsApp lotado de perguntas repetidas</span>
-              <span class="pain-badge">❌ Controle no caderno ou no Excel</span>
-              <span class="pain-badge">❌ Horas perdidas com tarefas manuais</span>
+            <div class="callout stack-md">
+              💡 <strong>Não sou uma agência.</strong> Você fala comigo direto, do primeiro contato
+              à entrega. Menos burocracia, mais agilidade e um preço que fecha pra quem tem um
+              negócio pequeno.
             </div>
+          </div>
 
-            <div class="flex flex-wrap gap-4 mb-14">
-              <a href="#projetos" class="btn-primary">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-                Ver o que já construí
-              </a>
-              <a href="#contato" class="btn-outline">Quero automatizar meu negócio</a>
-            </div>
-
-            <div class="grid grid-cols-3 gap-4 max-w-sm">
-              <div>
-                <div class="mono font-bold text-2xl text-green">+14<span style="font-size:1rem;">m</span></div>
-                <div class="mono text-xs mt-1" style="color: var(--subtle);">em segurança corporativa</div>
+          <div class="reveal">
+            <div class="terminal" id="terminal">
+              <div class="terminal__bar">
+                <span class="terminal__dot terminal__dot--red" aria-hidden="true"></span>
+                <span class="terminal__dot terminal__dot--yellow" aria-hidden="true"></span>
+                <span class="terminal__dot terminal__dot--green" aria-hidden="true"></span>
+                <span class="terminal__name">resumo_profissional.txt</span>
+                <button class="terminal__skip" type="button" id="terminal-skip" hidden>pular</button>
               </div>
-              <div style="border-left: 1px solid var(--border); padding-left: 16px;">
-                <div class="mono font-bold text-2xl text-green">6+</div>
-                <div class="mono text-xs mt-1" style="color: var(--subtle);">certificações técnicas</div>
-              </div>
-              <div style="border-left: 1px solid var(--border); padding-left: 16px;">
-                <div class="mono font-bold text-2xl text-green">24h</div>
-                <div class="mono text-xs mt-1" style="color: var(--subtle);">tempo de resposta</div>
+              <div class="terminal__body">
+                <p class="term-line"><span class="term-line__prompt" aria-hidden="true">›</span><span class="term-line__key">Especialidade:</span><span class="term-line__val">Automação &amp; Sistemas Web</span></p>
+                <p class="term-line"><span class="term-line__prompt" aria-hidden="true">›</span><span class="term-line__key">Empresa atual:</span><span class="term-line__val">INORPEL Cybersecurity</span></p>
+                <p class="term-line"><span class="term-line__prompt" aria-hidden="true">›</span><span class="term-line__key">Formação:</span><span class="term-line__val">Ciência da Computação — UNIESP</span></p>
+                <p class="term-line"><span class="term-line__prompt" aria-hidden="true">›</span><span class="term-line__key">Localização:</span><span class="term-line__val">João Pessoa, PB</span></p>
+                <p class="term-line"><span class="term-line__prompt" aria-hidden="true">›</span><span class="term-line__key">Atendimento:</span><span class="term-line__val">Presencial + Remoto</span></p>
+                <p class="term-line"><span class="term-line__prompt" aria-hidden="true">›</span><span class="term-line__key">Disponível:</span><span class="term-line__val term-line__val--ok">Sim ✓</span></p>
+                <p class="term-line stack-sm"><span class="term-line__prompt" aria-hidden="true">$</span><span class="cursor" aria-hidden="true"></span></p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- ══════════ SOBRE ══════════ -->
-      <section id="sobre" class="py-24" style="background: var(--surface); border-bottom: 1px solid var(--border);">
-        <div class="container mx-auto px-6 max-w-6xl">
-          <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="fade-up">
-              <p class="section-label mb-4">quem sou</p>
-              <h2 class="font-display font-bold text-3xl md:text-4xl mb-6" style="color: #e8f4f6; line-height: 1.2;">
-                Tecnologia que você<br/><span class="text-green">realmente entende.</span>
-              </h2>
-              <p class="text-base leading-relaxed mb-4" style="color: var(--text);">
-                Sou <strong style="color: var(--green);">Luís Eduardo</strong>, desenvolvedor e especialista em automação com experiência prática em segurança de dados e sistemas para empresas. Trabalho com <strong style="color:#e8f4f6;">Cybersecurity</strong> há mais de dois anos e desenvolvo projetos para negócios locais que precisam sair do improviso e escalar com segurança.
-              </p>
-              <p class="text-base leading-relaxed mb-8" style="color: var(--subtle);">
-                Minha missão é simples: entrar no seu negócio, entender como você opera e construir a solução certa — sem cobrar por tecnologia que você não precisa, sem deixar você preso em contratos longos.
-              </p>
-              <div class="callout" style="color: var(--text);">
-                💡 <strong style="color:#e8f4f6;">Não sou uma agência.</strong> Sou um especialista que trabalha diretamente com você. Isso significa menos burocracia, mais agilidade e um preço justo.
-              </div>
-            </div>
-
-            <div class="fade-up" style="transition-delay: 0.15s;">
-              <div style="background: var(--bg); border: 1px solid var(--border); border-radius: 8px; overflow: hidden;">
-                <div style="background: var(--muted); padding: 12px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--border);">
-                  <span style="width:12px;height:12px;background:#ff5f56;border-radius:50%;"></span>
-                  <span style="width:12px;height:12px;background:#ffbd2e;border-radius:50%;"></span>
-                  <span style="width:12px;height:12px;background:#27c93f;border-radius:50%;"></span>
-                  <span class="mono text-xs ml-4" style="color: var(--subtle);">resumo_profissional.txt</span>
-                </div>
-                <div style="padding: 24px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; line-height: 2;">
-                  <p><span class="text-green">›</span> <span style="color:#e8f4f6;">Especialidade:</span> <span style="color: #ffd080;">Automação & Sistemas Web</span></p>
-                  <p><span class="text-green">›</span> <span style="color:#e8f4f6;">Empresa atual:</span> <span style="color: #ffd080;">INORPEL Cybersecurity</span></p>
-                  <p><span class="text-green">›</span> <span style="color:#e8f4f6;">Formação:</span> <span style="color: #ffd080;">Ciência da Computação – UNIESP</span></p>
-                  <p><span class="text-green">›</span> <span style="color:#e8f4f6;">Localização:</span> <span style="color: #ffd080;">João Pessoa, PB</span></p>
-                  <p><span class="text-green">›</span> <span style="color:#e8f4f6;">Atendimento:</span> <span style="color: #79b8ff;">Presencial + Remoto</span></p>
-                  <p><span class="text-green">›</span> <span style="color:#e8f4f6;">Disponível:</span> <span style="color: #00ff88; font-weight: bold;">Sim ✓</span></p>
-                  <p class="mt-2"><span class="text-green">$</span> <span class="cursor" style="color:#e8f4f6;"></span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ══════════ SOLUÇÕES (PAIN POINTS) ══════════ -->
-      <section id="solucoes" class="py-24" style="background: var(--bg); border-bottom: 1px solid var(--border);">
-        <div class="container mx-auto px-6 max-w-6xl">
-          <div class="text-center mb-16 fade-up">
-            <p class="section-label mb-4">para quem é</p>
-            <h2 class="font-display font-bold text-3xl md:text-4xl mb-4" style="color: #e8f4f6;">Você se identifica com alguma dessas situações?</h2>
-            <p class="text-base max-w-xl mx-auto" style="color: var(--subtle);">Se sim, existe uma solução. E ela é mais simples — e mais barata — do que você imagina.</p>
-          </div>
-
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-            <div class="card rounded-lg p-6 fade-up">
-              <div class="text-3xl mb-4">📱</div>
-              <h3 class="font-display font-bold text-base mb-2" style="color: #e8f4f6;">"Fico respondendo as mesmas perguntas no WhatsApp o dia todo."</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--subtle);">Horário de funcionamento, preço, disponibilidade — isso não deveria ocupar o seu tempo. Um atendente virtual resolve antes de você ver a mensagem.</p>
-            </div>
-
-            <div class="card rounded-lg p-6 fade-up" style="transition-delay:0.05s;">
-              <div class="text-3xl mb-4">📋</div>
-              <h3 class="font-display font-bold text-base mb-2" style="color: #e8f4f6;">"Meu controle de estoque ou agenda ainda é no caderno."</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--subtle);">Uma planilha desatualizada ou um caderno que só você entende são um risco real pro negócio. Existe jeito melhor — e não é caro.</p>
-            </div>
-
-            <div class="card rounded-lg p-6 fade-up" style="transition-delay:0.1s;">
-              <div class="text-3xl mb-4">🔁</div>
-              <h3 class="font-display font-bold text-base mb-2" style="color: #e8f4f6;">"Minha equipe perde horas fazendo a mesma coisa toda semana."</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--subtle);">Enviar cobranças, atualizar planilhas, confirmar agendamentos — tudo isso pode ser automático. Sua equipe pode focar no que realmente importa.</p>
-            </div>
-
-            <div class="card rounded-lg p-6 fade-up" style="transition-delay:0.15s;">
-              <div class="text-3xl mb-4">🌐</div>
-              <h3 class="font-display font-bold text-base mb-2" style="color: #e8f4f6;">"Não tenho um site profissional ou minha presença digital é fraca."</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--subtle);">Hoje o cliente pesquisa antes de ligar. Se ele não te acha — ou não gosta do que vê — ele vai pro concorrente. Presença digital não é luxo.</p>
-            </div>
-
-            <div class="card rounded-lg p-6 fade-up" style="transition-delay:0.2s;">
-              <div class="text-3xl mb-4">🔗</div>
-              <h3 class="font-display font-bold text-base mb-2" style="color: #e8f4f6;">"Meus sistemas não conversam entre si — tenho que digitar tudo duas vezes."</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--subtle);">Venda no caixa, digita no estoque, passa pro contador — dá pra conectar tudo. Automatize o fluxo de informação e elimine o retrabalho.</p>
-            </div>
-
-            <div class="card rounded-lg p-6 fade-up" style="transition-delay:0.25s;">
-              <div class="text-3xl mb-4">🔒</div>
-              <h3 class="font-display font-bold text-base mb-2" style="color: #e8f4f6;">"Tenho medo de perder os dados do meu negócio."</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--subtle);">Computador que quebra, funcionário que sai com os dados, ataque de vírus — acontece mais do que você imagina. Informações seguras e com backup automático.</p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ══════════ PROJETOS ══════════ -->
-      <section id="projetos" class="py-24" style="background: var(--surface); border-bottom: 1px solid var(--border);">
-        <div class="container mx-auto px-6 max-w-6xl">
-          <div class="mb-16 fade-up">
-            <p class="section-label mb-4">casos reais</p>
-            <h2 class="font-display font-bold text-3xl md:text-4xl" style="color: #e8f4f6;">O que já foi construído</h2>
-            <p class="mt-3 text-base" style="color: var(--subtle); max-width: 480px;">Cada projeto resolveu um problema real de um negócio real. Veja como.</p>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-6">
-
-            <!-- WhatsApp AI -->
-            <div class="project-card fade-up">
-              <div style="background: linear-gradient(135deg, rgba(0,255,136,0.08) 0%, transparent 100%); padding: 24px; border-bottom: 1px solid var(--border);">
-                <div class="flex items-center justify-between mb-3">
-                  <span class="mono text-xs text-green">01 / Automação de Atendimento</span>
-                  <span class="mono text-xs px-2 py-1 rounded" style="background: rgba(0,255,136,0.08); border: 1px solid rgba(0,255,136,0.15); color: var(--green);">✓ Ativo</span>
-                </div>
-                <h3 class="font-display font-bold text-xl mb-1" style="color: #e8f4f6;">Atendente Virtual no WhatsApp</h3>
-                <p class="mono text-xs" style="color: var(--subtle);">Inteligência Artificial respondendo pelo seu negócio 24h por dia</p>
-              </div>
-              <div class="p-6 space-y-5">
-                <div>
-                  <p class="mono text-xs text-green mb-2">// o problema</p>
-                  <p class="text-sm leading-relaxed" style="color: var(--text);">Donos de negócios locais perdiam horas por dia no WhatsApp respondendo as mesmas dúvidas — horário de funcionamento, preço, disponibilidade de produto, como chegar. Enquanto isso, clientes mais urgentes ficavam esperando.</p>
-                </div>
-                <div>
-                  <p class="mono text-xs text-green mb-2">// a solução</p>
-                  <p class="text-sm leading-relaxed" style="color: var(--text);">Criei um sistema que conecta o WhatsApp Business a uma inteligência artificial treinada com as informações do negócio. Ela responde automaticamente, entende o contexto da conversa, faz agendamentos e só chama um humano quando o assunto é complexo.</p>
-                </div>
-                <div>
-                  <p class="mono text-xs text-green mb-2">// o impacto</p>
-                  <p class="text-sm leading-relaxed" style="color: var(--text);">O negócio passou a ser atendido 24 horas por dia, 7 dias por semana — sem pagar funcionário extra. <strong style="color:#e8f4f6;">Mais de 80% das mensagens rotineiras resolvidas sem intervenção humana.</strong></p>
-                </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                  <span class="skill-tag">WhatsApp Business</span>
-                  <span class="skill-tag">IA Integrada</span>
-                  <span class="skill-tag">Agendamento automático</span>
-                  <span class="skill-tag">Atendimento 24/7</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- EasyRecicle / ERP -->
-            <div class="project-card fade-up" style="transition-delay: 0.1s;">
-              <div style="background: linear-gradient(135deg, rgba(0,255,136,0.08) 0%, transparent 100%); padding: 24px; border-bottom: 1px solid var(--border);">
-                <div class="flex items-center justify-between mb-3">
-                  <span class="mono text-xs text-green">02 / Sistema de Gestão</span>
-                  <span class="mono text-xs px-2 py-1 rounded" style="background: rgba(0,255,136,0.08); border: 1px solid rgba(0,255,136,0.15); color: var(--green);">✓ Entregue</span>
-                </div>
-                <h3 class="font-display font-bold text-xl mb-1" style="color: #e8f4f6;">EasyRecicle — Fim da Papelada</h3>
-                <p class="mono text-xs" style="color: var(--subtle);">Sistema de gestão completo para uma associação de reciclagem</p>
-              </div>
-              <div class="p-6 space-y-5">
-                <div>
-                  <p class="mono text-xs text-green mb-2">// o problema</p>
-                  <p class="text-sm leading-relaxed" style="color: var(--text);">A associação controlava tudo no papel e em planilhas que travavam. Entrada de material, saída, relatórios administrativos — tudo manual, lento e sujeito a erro. Nenhum gestor conseguia ter uma visão clara do que estava acontecendo.</p>
-                </div>
-                <div>
-                  <p class="mono text-xs text-green mb-2">// a solução</p>
-                  <p class="text-sm leading-relaxed" style="color: var(--text);">Desenvolvi do zero um sistema de gestão completo e personalizado para a realidade deles. Registro de entradas, rastreamento do fluxo de materiais, geração de relatórios e painel administrativo — tudo em um único lugar, acessível de qualquer dispositivo.</p>
-                </div>
-                <div>
-                  <p class="mono text-xs text-green mb-2">// o impacto</p>
-                  <p class="text-sm leading-relaxed" style="color: var(--text);"><strong style="color:#e8f4f6;">Operação completamente digitalizada.</strong> A gestão passou a ter visibilidade real do negócio e o tempo gasto em burocracia caiu drasticamente. Hoje serve como modelo para outras associações.</p>
-                </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                  <span class="skill-tag">Sistema sob medida</span>
-                  <span class="skill-tag">Controle de estoque</span>
-                  <span class="skill-tag">Relatórios automáticos</span>
-                  <span class="skill-tag">Acesso em nuvem</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Site Gabriela -->
-            <div class="project-card fade-up" style="transition-delay: 0.15s;">
-              <div style="background: linear-gradient(135deg, rgba(0,255,136,0.08) 0%, transparent 100%); padding: 24px; border-bottom: 1px solid var(--border);">
-                <div class="flex items-center justify-between mb-3">
-                  <span class="mono text-xs text-green">03 / Presença Digital</span>
-                  <span class="mono text-xs px-2 py-1 rounded" style="background: rgba(0,255,136,0.08); border: 1px solid rgba(0,255,136,0.15); color: var(--green);">✓ No Ar</span>
-                </div>
-                <h3 class="font-display font-bold text-xl mb-1" style="color: #e8f4f6;">Site Profissional para Empresa de Construção</h3>
-                <p class="mono text-xs" style="color: var(--subtle);">Presença digital para captação de clientes — EUA</p>
-              </div>
-              <div class="p-6 space-y-5">
-                <div>
-                  <p class="mono text-xs text-green mb-2">// o problema</p>
-                  <p class="text-sm leading-relaxed" style="color: var(--text);">Uma empresa de construção civil sem site profissional, dependendo exclusivamente de indicações boca a boca. Potenciais clientes pesquisavam no Google e não encontravam nada — ou saíam sem confiança para fechar negócio.</p>
-                </div>
-                <div>
-                  <p class="mono text-xs text-green mb-2">// a solução</p>
-                  <p class="text-sm leading-relaxed" style="color: var(--text);">Criei um site moderno, rápido e otimizado para aparecer no Google. Com portfólio de obras, informações de contato claras e design que transmite credibilidade desde o primeiro acesso — hospedado com domínio próprio e SSL.</p>
-                </div>
-                <div>
-                  <p class="mono text-xs text-green mb-2">// o impacto</p>
-                  <p class="text-sm leading-relaxed" style="color: var(--text);">A empresa passou a ter uma vitrine digital profissional, <strong style="color:#e8f4f6;">acessível de qualquer lugar do mundo.</strong> Clientes em potencial chegam com mais confiança e o processo de venda ficou mais fácil.</p>
-                </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                  <span class="skill-tag">Site profissional</span>
-                  <span class="skill-tag">Domínio próprio</span>
-                  <span class="skill-tag">Design moderno</span>
-                  <span class="skill-tag">Otimizado p/ Google</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Integração de Sistemas -->
-            <div class="project-card fade-up" style="transition-delay: 0.2s;">
-              <div style="background: linear-gradient(135deg, rgba(0,255,136,0.08) 0%, transparent 100%); padding: 24px; border-bottom: 1px solid var(--border);">
-                <div class="flex items-center justify-between mb-3">
-                  <span class="mono text-xs text-green">04 / Integração & Automação</span>
-                  <span class="mono text-xs px-2 py-1 rounded" style="background: rgba(0,255,136,0.08); border: 1px solid rgba(0,255,136,0.15); color: var(--green);">Freelance</span>
-                </div>
-                <h3 class="font-display font-bold text-xl mb-1" style="color: #e8f4f6;">Integração de Sistemas — Chega de Digitar Duas Vezes</h3>
-                <p class="mono text-xs" style="color: var(--subtle);">Conectando ferramentas que não se falam</p>
-              </div>
-              <div class="p-6 space-y-5">
-                <div>
-                  <p class="mono text-xs text-green mb-2">// o problema</p>
-                  <p class="text-sm leading-relaxed" style="color: var(--text);">Muitas empresas usam vários sistemas diferentes — caixa, estoque, CRM, contador — que não se comunicam entre si. O resultado é trabalho dobrado: a mesma informação digitada mais de uma vez, todo dia.</p>
-                </div>
-                <div>
-                  <p class="mono text-xs text-green mb-2">// a solução</p>
-                  <p class="text-sm leading-relaxed" style="color: var(--text);">Desenvolvi automações que conectam os sistemas já usados pela empresa, fazendo a informação fluir automaticamente de um para o outro — sem intervenção humana. Venda registrada no caixa? Estoque já atualiza sozinho.</p>
-                </div>
-                <div>
-                  <p class="mono text-xs text-green mb-2">// o impacto</p>
-                  <p class="text-sm leading-relaxed" style="color: var(--text);">Elimina retrabalho, reduz erros de digitação e libera horas da sua equipe por semana. <strong style="color:#e8f4f6;">Tecnologia que trabalha por você nos bastidores.</strong></p>
-                </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                  <span class="skill-tag">Integração de sistemas</span>
-                  <span class="skill-tag">Automação de dados</span>
-                  <span class="skill-tag">Redução de erros</span>
-                  <span class="skill-tag">Tempo real</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ══════════ SERVIÇOS ══════════ -->
-      <section id="servicos" class="py-24" style="background: var(--bg); border-bottom: 1px solid var(--border);">
-        <div class="container mx-auto px-6 max-w-6xl">
-          <div class="text-center mb-16 fade-up">
-            <p class="section-label mb-4">o que faço</p>
-            <h2 class="font-display font-bold text-3xl md:text-4xl mb-4" style="color: #e8f4f6;">Soluções que entregam resultado</h2>
-            <p class="mono text-sm max-w-xl mx-auto" style="color: var(--subtle);">// Sem contrato de 12 meses. Sem projeto inchado. Só o que o seu negócio precisa.</p>
-          </div>
-
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
-
-            <div class="service-card fade-up">
-              <div class="text-3xl mb-5">🤖</div>
-              <h3 class="font-display font-bold text-base mb-3" style="color: #e8f4f6;">Atendente Virtual com IA</h3>
-              <p class="text-sm leading-relaxed mb-5" style="color: var(--subtle);">Seu WhatsApp respondendo 24/7 com inteligência artificial. Agendamentos, dúvidas, catálogo — tudo automatizado.</p>
-              <ul class="space-y-2">
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Resposta imediata fora do horário</li>
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Agendamento automático</li>
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Triagem e encaminhamento</li>
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Sem mensalidade de plataforma</li>
-              </ul>
-            </div>
-
-            <div class="service-card fade-up" style="transition-delay:0.1s;">
-              <div class="text-3xl mb-5">🗂️</div>
-              <h3 class="font-display font-bold text-base mb-3" style="color: #e8f4f6;">Sistema de Gestão</h3>
-              <p class="text-sm leading-relaxed mb-5" style="color: var(--subtle);">Substitua o caderno e a planilha por um sistema feito pra sua realidade. Estoque, agenda, clientes — organizado e acessível.</p>
-              <ul class="space-y-2">
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Controle de estoque em tempo real</li>
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Cadastro de clientes e histórico</li>
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Relatórios com um clique</li>
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Acesso de qualquer lugar</li>
-              </ul>
-            </div>
-
-            <div class="service-card fade-up" style="transition-delay:0.2s;">
-              <div class="text-3xl mb-5">🌐</div>
-              <h3 class="font-display font-bold text-base mb-3" style="color: #e8f4f6;">Site & Presença Digital</h3>
-              <p class="text-sm leading-relaxed mb-5" style="color: var(--subtle);">Site rápido, profissional e que aparece no Google. Sua empresa visível pra quem está procurando o que você oferece.</p>
-              <ul class="space-y-2">
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Design moderno e responsivo</li>
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Otimização para Google (SEO)</li>
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Domínio próprio e SSL</li>
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Entrega em até 7 dias</li>
-              </ul>
-            </div>
-
-            <div class="service-card fade-up" style="transition-delay:0.3s;">
-              <div class="text-3xl mb-5">🔐</div>
-              <h3 class="font-display font-bold text-base mb-3" style="color: #e8f4f6;">Segurança & Backup</h3>
-              <p class="text-sm leading-relaxed mb-5" style="color: var(--subtle);">Proteção dos dados do seu negócio com backup automático. Se algo der errado, você recupera tudo — sem depender de sorte.</p>
-              <ul class="space-y-2">
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Backup automático na nuvem</li>
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Proteção contra vírus e ataques</li>
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Recuperação rápida de dados</li>
-                <li class="mono text-xs flex items-start gap-2" style="color: var(--text);"><span class="text-green mt-0.5">▸</span>Relatório mensal de saúde</li>
-              </ul>
-            </div>
-
-          </div>
-
-          <!-- CTA -->
-          <div class="text-center fade-up">
-            <div style="display: inline-block; background: var(--surface); border: 1px solid rgba(0,255,136,0.2); border-radius: 12px; padding: 40px 48px; max-width: 560px; width: 100%;">
-              <p class="mono text-xs text-green mb-3">// próximo_passo.sh</p>
-              <h3 class="font-display font-bold text-2xl mb-4" style="color: #e8f4f6;">Seu negócio rodando sozinho enquanto você foca no que importa.</h3>
-              <p class="text-sm mb-8" style="color: var(--subtle);">Me conta o seu maior problema hoje. Em 24 horas te mostro como resolver.</p>
-              <div class="flex flex-wrap justify-center gap-4">
-                <a href="mailto:dtr.luis18@gmail.com" class="btn-primary">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                  Quero automatizar meu negócio
-                </a>
-                <a href="https://wa.me/5583991389333" target="_blank" class="btn-outline">
-                  WhatsApp ↗
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ══════════ DIFERENCIAIS ══════════ -->
-      <section class="py-20" style="background: var(--surface); border-bottom: 1px solid var(--border);">
-        <div class="container mx-auto px-6 max-w-6xl">
-          <div class="text-center mb-14 fade-up">
-            <p class="section-label mb-4">por que eu</p>
-            <h2 class="font-display font-bold text-3xl md:text-4xl" style="color: #e8f4f6;">O que me diferencia</h2>
-          </div>
-
-          <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center fade-up">
-              <div class="num-circle mx-auto mb-4">01</div>
-              <h3 class="font-display font-bold text-lg mb-2" style="color: #e8f4f6;">Segurança de empresa grande, custo de freelancer</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--subtle);">Trabalho em segurança corporativa há mais de um ano. Seus dados e sistemas ficam protegidos com o mesmo padrão de empresas de grande porte.</p>
-            </div>
-            <div class="text-center fade-up" style="transition-delay:0.1s;">
-              <div class="num-circle mx-auto mb-4">02</div>
-              <h3 class="font-display font-bold text-lg mb-2" style="color: #e8f4f6;">Direto ao ponto, sem enrolação</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--subtle);">Sem reuniões intermináveis nem proposta de 40 páginas. Você me fala o problema, eu te apresento a solução e o prazo. Simples assim.</p>
-            </div>
-            <div class="text-center fade-up" style="transition-delay:0.2s;">
-              <div class="num-circle mx-auto mb-4">03</div>
-              <h3 class="font-display font-bold text-lg mb-2" style="color: #e8f4f6;">Você entende o que está pagando</h3>
-              <p class="text-sm leading-relaxed" style="color: var(--subtle);">Explico tudo em português claro. Sem jargão técnico, sem cobrar por coisas que você não precisa. Transparência do primeiro contato à entrega.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- ══════════ FOOTER / CONTACT ══════════ -->
-    <footer id="contato" style="background: var(--bg); border-top: 1px solid var(--border);" class="py-20">
-      <div class="container mx-auto px-6 max-w-6xl">
-        <div class="text-center mb-12 fade-up">
-          <p class="section-label mb-4">contato</p>
-          <h3 class="font-display font-bold text-3xl md:text-4xl mb-4" style="color: #e8f4f6;">Pronto para começar?</h3>
-          <p class="mono text-sm" style="color: var(--subtle);">// Me conta o desafio. Respondo em menos de 24 horas.</p>
-        </div>
-
-        <div class="flex flex-col md:flex-row justify-center gap-4 mb-12 fade-up">
-          <a href="mailto:dtr.luis18@gmail.com" class="btn-primary justify-center">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            dtr.luis18@gmail.com
-          </a>
-          <a href="https://wa.me/5583991389333" target="_blank" class="btn-outline justify-center">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            +55 (83) 99138-9333
-          </a>
-        </div>
-
-        <div class="flex justify-center gap-4 mb-12 fade-up">
-          <a href="https://www.linkedin.com/in/lu%C3%ADs-eduardo-de-carvalho/" target="_blank"
-            style="width:44px;height:44px;background:var(--surface);border:1px solid var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;color:var(--subtle);"
-            onmouseover="this.style.borderColor='rgba(0,255,136,0.4)';this.style.color='var(--green)';"
-            onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--subtle)';"
-          >
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-          </a>
-          <a href="https://github.com/loki-crypto" target="_blank"
-            style="width:44px;height:44px;background:var(--surface);border:1px solid var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;color:var(--subtle);"
-            onmouseover="this.style.borderColor='rgba(0,255,136,0.4)'"
-            onmouseout="this.style.borderColor='var(--border)'"
-          >
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-            </svg>
-          </a>
-          <a href="https://www.fiverr.com/sellers/luis_b_carvalho/" target="_blank"
-            style="width:44px;height:44px;background:var(--surface);border:1px solid var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;transition:all 0.2s;color:var(--subtle);font-family:'JetBrains Mono',monospace;font-size:0.65rem;font-weight:700;"
-            onmouseover="this.style.borderColor='rgba(0,255,136,0.4)';this.style.color='var(--green)';"
-            onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--subtle)';"
-          >5r</a>
-        </div>
-
-        <div class="text-center">
-          <p class="mono text-xs" style="color: var(--subtle);">&copy; 2025 Luís Eduardo B. C. de Carvalho · João Pessoa, PB · Tecnologia que trabalha por você.</p>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    <!-- ══════════════════════════ SOLUÇÕES ══════════════════════════ -->
+    <section class="section" id="solucoes">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow flow-sm">para quem é</p>
+          <h2 class="section-title">Você se identifica com alguma dessas?</h2>
+          <p class="section-sub measure-center">
+            Se sim, tem solução. E é mais simples — e mais barata — do que você imagina.
+          </p>
+        </div>
 
-      // Mobile Menu
-      document.getElementById('menu-btn').addEventListener('click', () => {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
-      });
-      document.querySelectorAll('#mobile-menu a').forEach(a => {
-        a.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
-      });
+        <div class="grid grid--3">
 
-      // Scroll Fade-in
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-      }, { threshold: 0.08 });
-      document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+          <div class="card reveal">
+            <p class="card__icon" aria-hidden="true">📱</p>
+            <h3 class="card__title">"Passo o dia respondendo a mesma pergunta no WhatsApp."</h3>
+            <p class="card__text">Horário, preço, se tem vaga, como chegar. Isso não devia ocupar o seu tempo — dá pra responder sozinho, antes de você nem ver a mensagem.</p>
+          </div>
 
-    });
-    </script>
-  </body>
+          <div class="card reveal">
+            <p class="card__icon" aria-hidden="true">📋</p>
+            <h3 class="card__title">"Minha agenda (ou meu estoque) ainda é no caderno."</h3>
+            <p class="card__text">Caderno que só você entende e planilha desatualizada são risco real. Se o caderno some, some o negócio junto. Existe jeito melhor e não é caro.</p>
+          </div>
+
+          <div class="card reveal">
+            <p class="card__icon" aria-hidden="true">🔁</p>
+            <h3 class="card__title">"Minha equipe perde horas na mesma tarefa toda semana."</h3>
+            <p class="card__text">Confirmar agendamento, mandar cobrança, atualizar planilha. Tudo isso pode rodar sozinho e liberar a equipe pro que dá dinheiro.</p>
+          </div>
+
+          <div class="card reveal">
+            <p class="card__icon" aria-hidden="true">🌐</p>
+            <h3 class="card__title">"Não tenho site, minha presença digital é fraca."</h3>
+            <p class="card__text">O cliente pesquisa antes de ligar. Se ele não te acha — ou não gosta do que vê — ele vai no concorrente que aparece melhor.</p>
+          </div>
+
+          <div class="card reveal">
+            <p class="card__icon" aria-hidden="true">🔗</p>
+            <h3 class="card__title">"Meus sistemas não conversam, digito tudo duas vezes."</h3>
+            <p class="card__text">Vende no caixa, digita no estoque, manda pro contador. Dá pra conectar e a informação passa sozinha de um pro outro.</p>
+          </div>
+
+          <div class="card reveal">
+            <p class="card__icon" aria-hidden="true">🔒</p>
+            <h3 class="card__title">"Tenho medo de perder os dados do meu negócio."</h3>
+            <p class="card__text">Computador queima, funcionário sai com a planilha, vírus trava tudo. Acontece mais do que parece — e backup automático resolve barato.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ CASOS ══════════════════════════ -->
+    <section class="section section--alt" id="casos">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow flow-sm">casos reais</p>
+          <h2 class="section-title">O que já foi construído</h2>
+          <p class="section-sub measure">Cada um resolveu um problema real de um negócio real. Um deles você pode testar agora, no navegador.</p>
+        </div>
+
+        <div class="grid grid--2">
+
+          <!-- 01 · StudioFlow -->
+          <article class="case reveal">
+            <div class="case__head">
+              <div class="case__meta">
+                <span class="case__index">01 / Agendamento Online</span>
+                <span class="case__badge">✓ No ar</span>
+              </div>
+              <h3 class="case__title">StudioFlow — Agenda Online para Salão e Pet Shop</h3>
+              <p class="case__sub">Sistema completo de agendamento, com link para o cliente marcar sozinho</p>
+            </div>
+            <div class="case__body">
+              <div>
+                <p class="case__block-label mono">// o problema</p>
+                <p class="case__block-text">Salão, pet shop e estúdio de sobrancelha marcam tudo por WhatsApp e caderno. Cliente manda mensagem fora do horário e não é atendido, horário marcado duas vezes, e ninguém sabe quanto entrou no mês sem sentar pra contar.</p>
+              </div>
+              <div>
+                <p class="case__block-label mono">// a solução</p>
+                <p class="case__block-text">Construí um sistema onde o cliente entra por um link, escolhe o serviço, o profissional e o horário livre — sozinho, a qualquer hora. O dono acompanha tudo por um painel: agenda do dia, cadastro de clientes e quanto já entrou.</p>
+              </div>
+              <div>
+                <p class="case__block-label mono">// o impacto</p>
+                <p class="case__block-text">O negócio passa a <strong>receber agendamento 24 horas por dia</strong>, sem ninguém precisar responder. E a agenda para de depender de uma pessoa só lembrar.</p>
+              </div>
+              <a class="case__link" href="https://salao-system.vercel.app/demonstracao" target="_blank" rel="noopener noreferrer">Ver o sistema funcionando ↗</a>
+              <div class="tag-row">
+                <span class="skill-tag">Agendamento 24h</span>
+                <span class="skill-tag">Painel do dono</span>
+                <span class="skill-tag">Cadastro de clientes</span>
+                <span class="skill-tag">Acesso pelo celular</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 02 · WhatsApp AI -->
+          <article class="case reveal">
+            <div class="case__head">
+              <div class="case__meta">
+                <span class="case__index">02 / Automação de Atendimento</span>
+                <span class="case__badge">✓ Ativo</span>
+              </div>
+              <h3 class="case__title">Atendente Virtual no WhatsApp</h3>
+              <p class="case__sub">Inteligência artificial respondendo pelo negócio 24h por dia</p>
+            </div>
+            <div class="case__body">
+              <div>
+                <p class="case__block-label mono">// o problema</p>
+                <p class="case__block-text">O dono perdia horas por dia no WhatsApp respondendo as mesmas dúvidas — horário, preço, disponibilidade, como chegar. Enquanto isso, o cliente que queria comprar de verdade ficava esperando na fila.</p>
+              </div>
+              <div>
+                <p class="case__block-label mono">// a solução</p>
+                <p class="case__block-text">Conectei o WhatsApp Business a uma inteligência artificial treinada com as informações do negócio. Ela entende o contexto da conversa, responde na hora, faz agendamento e só passa pra um humano quando o assunto foge do roteiro.</p>
+              </div>
+              <div>
+                <p class="case__block-label mono">// o impacto</p>
+                <p class="case__block-text">O negócio passou a ser atendido <strong>24 horas por dia, sem funcionário extra</strong> — e as mensagens rotineiras pararam de consumir o dia do dono.</p>
+              </div>
+              <div class="tag-row">
+                <span class="skill-tag">WhatsApp Business</span>
+                <span class="skill-tag">IA integrada</span>
+                <span class="skill-tag">Agendamento automático</span>
+                <span class="skill-tag">Atendimento 24/7</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03 · EasyRecicle -->
+          <article class="case reveal">
+            <div class="case__head">
+              <div class="case__meta">
+                <span class="case__index">03 / Sistema de Gestão</span>
+                <span class="case__badge">✓ Entregue</span>
+              </div>
+              <h3 class="case__title">EasyRecicle — Fim da Papelada</h3>
+              <p class="case__sub">Sistema de gestão completo para uma associação de reciclagem</p>
+            </div>
+            <div class="case__body">
+              <div>
+                <p class="case__block-label mono">// o problema</p>
+                <p class="case__block-text">A associação controlava tudo no papel e em planilha que travava. Entrada de material, saída, relatório pra prestação de contas — tudo manual, lento e sujeito a erro. Nenhum gestor tinha visão clara do que estava acontecendo.</p>
+              </div>
+              <div>
+                <p class="case__block-label mono">// a solução</p>
+                <p class="case__block-text">Desenvolvi do zero um sistema feito pra realidade deles: registro de entrada, rastreamento do fluxo de material, geração de relatório e painel administrativo — tudo num lugar só, acessível de qualquer aparelho.</p>
+              </div>
+              <div>
+                <p class="case__block-label mono">// o impacto</p>
+                <p class="case__block-text"><strong>Operação inteira digitalizada.</strong> A gestão passou a enxergar o próprio negócio e o tempo gasto em burocracia caiu muito. Hoje serve de modelo pra outras associações.</p>
+              </div>
+              <div class="tag-row">
+                <span class="skill-tag">Sistema sob medida</span>
+                <span class="skill-tag">Controle de estoque</span>
+                <span class="skill-tag">Relatórios automáticos</span>
+                <span class="skill-tag">Acesso em nuvem</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04 · Site construção -->
+          <article class="case reveal">
+            <div class="case__head">
+              <div class="case__meta">
+                <span class="case__index">04 / Presença Digital</span>
+                <span class="case__badge">✓ No ar</span>
+              </div>
+              <h3 class="case__title">Site Profissional para Empresa de Construção</h3>
+              <p class="case__sub">Presença digital para captação de clientes — Estados Unidos</p>
+            </div>
+            <div class="case__body">
+              <div>
+                <p class="case__block-label mono">// o problema</p>
+                <p class="case__block-text">Empresa de construção civil sem site, vivendo só de indicação boca a boca. O cliente em potencial pesquisava no Google, não achava nada, e desistia antes mesmo de ligar.</p>
+              </div>
+              <div>
+                <p class="case__block-label mono">// a solução</p>
+                <p class="case__block-text">Criei um site rápido, com portfólio de obras, contato claro e um visual que passa credibilidade no primeiro acesso — com domínio próprio, SSL e otimizado para aparecer no Google.</p>
+              </div>
+              <div>
+                <p class="case__block-label mono">// o impacto</p>
+                <p class="case__block-text">A empresa ganhou uma vitrine profissional <strong>acessível de qualquer lugar do mundo</strong>. O cliente chega com mais confiança e a venda fica mais fácil de fechar.</p>
+              </div>
+              <div class="tag-row">
+                <span class="skill-tag">Site profissional</span>
+                <span class="skill-tag">Domínio próprio</span>
+                <span class="skill-tag">Design moderno</span>
+                <span class="skill-tag">Otimizado p/ Google</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ PRODUTOS / PREÇOS ══════════════════════════ -->
+    <section class="section" id="produtos">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow flow-sm">pronto pra usar</p>
+          <h2 class="section-title">Produtos prontos, com preço na tela</h2>
+          <p class="section-sub measure-center">
+            Já estão construídos e funcionando. Você não paga desenvolvimento, não espera projeto
+            e sabe quanto custa antes de falar comigo.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+
+          <div class="price-card price-card--featured reveal">
+            <span class="price-card__tag">Mais procurado</span>
+            <h3 class="price-card__title">Agenda Online</h3>
+            <p class="price-card__for">salão · pet shop · sobrancelha · barbearia · nail</p>
+            <p class="price-card__value">R$99<span class="price-card__period"> /mês</span></p>
+            <p class="price-card__note">Cancela quando quiser, sem multa e sem fidelidade.</p>
+            <ul class="feature-list">
+              <li>Link de agendamento pro seu cliente</li>
+              <li>Agenda do dia no seu celular</li>
+              <li>Cadastro de clientes e histórico</li>
+              <li>Recebe agendamento 24h, até fechado</li>
+              <li>Configuro tudo com você</li>
+            </ul>
+            <a href="https://wa.me/5583991389333?text=Oi%20Lu%C3%ADs!%20Quero%20saber%20mais%20sobre%20a%20Agenda%20Online%20de%20R%2499%2Fm%C3%AAs." target="_blank" rel="noopener noreferrer" class="btn btn--primary">Quero a agenda online</a>
+          </div>
+
+          <div class="price-card reveal">
+            <span class="price-card__tag price-card__tag--neutral">Pagamento único</span>
+            <h3 class="price-card__title">Gerador de Orçamento em PDF</h3>
+            <p class="price-card__for">assistência técnica de celular · informática</p>
+            <p class="price-card__value">R$97<span class="price-card__period"> uma vez</span></p>
+            <p class="price-card__note">É seu pra sempre. Sem mensalidade e sem depender de internet.</p>
+            <ul class="feature-list">
+              <li>Orçamento em PDF com a sua logo</li>
+              <li>Funciona offline, no seu computador</li>
+              <li>Guarda o histórico dos orçamentos</li>
+              <li>Eu instalo e personalizo pra você</li>
+              <li>Ensino a usar em 10 minutos</li>
+            </ul>
+            <a href="https://wa.me/5583991389333?text=Oi%20Lu%C3%ADs!%20Quero%20o%20gerador%20de%20or%C3%A7amento%20em%20PDF%20de%20R%2497." target="_blank" rel="noopener noreferrer" class="btn btn--outline">Quero o gerador</a>
+          </div>
+
+          <div class="price-card reveal">
+            <span class="price-card__tag price-card__tag--neutral">Pagamento único</span>
+            <h3 class="price-card__title">Orçamento para Refrigeração</h3>
+            <p class="price-card__for">ar-condicionado · instalação · higienização</p>
+            <p class="price-card__value">R$97<span class="price-card__period"> uma vez</span></p>
+            <p class="price-card__note">A mesma ferramenta, com os serviços do seu ramo já prontos.</p>
+            <ul class="feature-list">
+              <li>Instalação, higienização e recarga</li>
+              <li>PDF com a sua logo no lugar do áudio</li>
+              <li>Funciona offline, na obra também</li>
+              <li>Eu instalo e personalizo pra você</li>
+              <li>Ensino a usar em 10 minutos</li>
+            </ul>
+            <a href="https://wa.me/5583991389333?text=Oi%20Lu%C3%ADs!%20Quero%20o%20or%C3%A7amento%20em%20PDF%20para%20ar-condicionado%20de%20R%2497." target="_blank" rel="noopener noreferrer" class="btn btn--outline">Quero o gerador</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ SERVIÇOS ══════════════════════════ -->
+    <section class="section section--alt" id="servicos">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow flow-sm">sob medida</p>
+          <h2 class="section-title">Precisa de algo feito pro seu caso?</h2>
+          <p class="section-sub measure-center">
+            Quando o produto pronto não resolve, eu construo. Orçamento fechado antes de começar —
+            você aprova o preço e o prazo, e só depois eu ponho a mão.
+          </p>
+        </div>
+
+        <div class="grid grid--4 flow-lg">
+
+          <div class="service-card reveal">
+            <p class="card__icon" aria-hidden="true">🤖</p>
+            <h3 class="card__title">Atendente Virtual com IA</h3>
+            <p class="card__text">Seu WhatsApp respondendo sozinho, 24h. Dúvida, catálogo e agendamento sem você abrir o celular.</p>
+            <ul class="feature-list">
+              <li>Resposta imediata fora do horário</li>
+              <li>Agendamento automático</li>
+              <li>Passa pra você quando é sério</li>
+            </ul>
+          </div>
+
+          <div class="service-card reveal">
+            <p class="card__icon" aria-hidden="true">🗂️</p>
+            <h3 class="card__title">Sistema de Gestão</h3>
+            <p class="card__text">Troca o caderno e a planilha por um sistema feito pra sua rotina. Estoque, agenda e clientes organizados.</p>
+            <ul class="feature-list">
+              <li>Estoque em tempo real</li>
+              <li>Cadastro e histórico de clientes</li>
+              <li>Relatório com um clique</li>
+            </ul>
+          </div>
+
+          <div class="service-card reveal">
+            <p class="card__icon" aria-hidden="true">🌐</p>
+            <h3 class="card__title">Site &amp; Presença Digital</h3>
+            <p class="card__text">Site rápido, profissional e que aparece no Google quando procuram o que você vende.</p>
+            <ul class="feature-list">
+              <li>Funciona bem no celular</li>
+              <li>Otimizado para o Google</li>
+              <li>Domínio próprio e SSL</li>
+            </ul>
+          </div>
+
+          <div class="service-card reveal">
+            <p class="card__icon" aria-hidden="true">🔐</p>
+            <h3 class="card__title">Segurança &amp; Backup</h3>
+            <p class="card__text">Backup automático dos dados do negócio. Se o computador morrer, você recupera tudo sem depender de sorte.</p>
+            <ul class="feature-list">
+              <li>Backup automático na nuvem</li>
+              <li>Proteção contra vírus e ataque</li>
+              <li>Recuperação rápida</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="cta-box reveal">
+          <p class="eyebrow flow-sm">próximo_passo.sh</p>
+          <h3 class="section-title flow-md">Me conta o seu maior problema hoje.</h3>
+          <p class="body-text measure-center flow-lg">
+            Em até 24 horas eu te respondo dizendo se dá pra resolver, como, e quanto custa.
+            Se não for o meu tipo de trabalho, eu falo na hora — e indico quem faz.
+          </p>
+          <div class="button-row button-row--center button-row--flush">
+            <a href="https://wa.me/5583991389333" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+              Chamar no WhatsApp
+            </a>
+            <a href="mailto:dtr.luis18@gmail.com" class="btn btn--outline">Prefiro e-mail</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ DIFERENCIAIS ══════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow flow-sm">por que eu</p>
+          <h2 class="section-title">O que me diferencia</h2>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="center reveal">
+            <p class="num-circle">01</p>
+            <h3 class="card__title">Segurança de empresa grande, preço de quem trabalha sozinho</h3>
+            <p class="card__text">Meu dia a dia é segurança da informação numa empresa de cibersegurança. Seus dados são tratados com esse mesmo cuidado — sem custar o preço de uma consultoria.</p>
+          </div>
+          <div class="center reveal">
+            <p class="num-circle">02</p>
+            <h3 class="card__title">Direto ao ponto, sem enrolação</h3>
+            <p class="card__text">Sem reunião de uma hora nem proposta de 40 páginas. Você me conta o problema, eu volto com a solução, o prazo e o preço. Só isso.</p>
+          </div>
+          <div class="center reveal">
+            <p class="num-circle">03</p>
+            <h3 class="card__title">Você entende o que está pagando</h3>
+            <p class="card__text">Explico tudo em português claro, sem jargão. E não vendo o que você não precisa — se o caderno resolve o seu caso, eu falo que resolve.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════ FOOTER / CONTATO ══════════════════════════ -->
+  <footer class="site-footer" id="contato">
+    <div class="container">
+
+      <div class="section-head center reveal">
+        <p class="eyebrow flow-sm">contato</p>
+        <h2 class="section-title">Pronto para começar?</h2>
+        <p class="section-sub measure-center">Me chama no WhatsApp. Respondo em menos de 24 horas.</p>
+      </div>
+
+      <div class="button-row button-row--center reveal">
+        <a href="https://wa.me/5583991389333" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+          (83) 99138-9333
+        </a>
+        <a href="mailto:dtr.luis18@gmail.com" class="btn btn--outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+          dtr.luis18@gmail.com
+        </a>
+      </div>
+
+      <div class="social-row reveal stack-md">
+        <!-- TODO Luís: confirmar o slug REAL do LinkedIn (o antigo tinha acento
+             codificado e provavelmente estava quebrado) e trocar aqui. -->
+        <a class="social-link" href="https://www.linkedin.com/in/loki-crypto/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+        </a>
+        <a class="social-link" href="https://github.com/loki-crypto" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>
+        </a>
+        <a class="social-link" href="https://www.fiverr.com/sellers/luis_b_carvalho/" target="_blank" rel="noopener noreferrer" aria-label="Fiverr">5r</a>
+      </div>
+
+      <p class="footer-note stack-md">
+        © <span id="year">2026</span> Luís Eduardo B. C. de Carvalho · João Pessoa, PB<br />
+        Tecnologia que trabalha por você.
+      </p>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
 </html>

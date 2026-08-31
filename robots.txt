@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luis-carvalho-pt-br.vercel.app/sitemap.xml
